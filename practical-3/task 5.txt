@@ -1,0 +1,92 @@
+.model small 
+.stack 100h 
+.data  
+var1 db 22h
+s1 db '* * * * * * *$'
+s2 db '* * * * * * $'
+s3 db '* * * * *  $'  
+s4 db '* * * *  $'
+s5 db '* * *  $'  
+s6 db '* *  $'
+s7 db '* $'
+.code 
+Main Proc 
+    mov ax, @data
+    mov ds, ax
+    lea dx, s1
+    mov ah,9
+    int 21h
+    
+    mov dl,10
+    mov ah, 2
+    int 21h
+    
+    mov dl, 13
+    mov ah, 2
+    int 21h 
+     
+    lea dx, s2
+    mov ah,9
+    int 21h  
+    
+    mov dl,10
+    mov ah, 2
+    int 21h
+    
+    mov dl, 13
+    mov ah, 2
+    int 21h 
+     
+    lea dx, s3
+    mov ah,9
+    int 21h 
+    
+    mov dl,10
+    mov ah, 2
+    int 21h
+    
+    mov dl, 13
+    mov ah, 2
+    int 21h 
+     
+    lea dx, s4
+    mov ah,9
+    int 21h
+    
+    mov dl,10
+    mov ah, 2
+    int 21h
+    
+    mov dl, 13
+    mov ah, 2
+    int 21h 
+     
+    lea dx, s5
+    mov ah,9
+    int 21h 
+    
+    mov dl,10
+    mov ah, 2
+    int 21h
+    
+    mov dl, 13
+    mov ah, 2
+    int 21h 
+     
+    lea dx, s6
+    mov ah,9
+    int 21h 
+    
+    mov dl,10
+    mov ah, 2
+    int 21h
+    
+    mov dl, 13
+    mov ah, 2
+    int 21h 
+     
+    lea dx, s7
+    mov ah,9
+    int 21h
+Main endp 
+End Main 

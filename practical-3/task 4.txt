@@ -1,0 +1,14 @@
+
+.model small
+.stack 100
+.data
+var1 db 22h
+string db 'my name is zainab$'
+.code
+Main Proc
+mov ax, @data
+mov ds, ax
+lea dx, string
+mov ah, 9
+int 21h
+Main endp
